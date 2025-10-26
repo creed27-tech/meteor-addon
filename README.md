@@ -80,6 +80,35 @@ Here is a brief explanation of the ones you might need to modify:
 - `README.md`: Contains the documentation of the addon.  
   You can edit this file to reflect the documentation of your addon, and showcase its features.
 
+## Modules
+
+### SpeedBypassModule
+
+**Location**: `src/main/java/com/example/addon/modules/SpeedBypassModule.java`
+
+**Purpose**: A module that implements Paper (velocity) bypass for speed. This module attempts to bypass Paper server's velocity checks to allow faster movement.
+
+**Features**:
+- **Speed Multiplier**: Configurable speed multiplier (default: 1.5x, range: 0.1x - 5.0x)
+- **Multiple Bypass Modes**:
+  - **Vanilla**: Simple speed multiplication for straightforward movement
+  - **Strafe**: Optimized for strafing movement patterns
+  - **BHop**: Bunny hop style movement for maintaining speed
+- **Timer Support**: Optional timer manipulation to increase speed further
+
+**Usage**:
+1. Enable the module in Meteor Client
+2. Configure the speed multiplier to your desired value
+3. Select a bypass mode that works best for your server
+4. Optionally enable timer manipulation for additional speed
+
+**Settings**:
+- `speed-multiplier`: The multiplier to apply to player movement (Double, 0.1-5.0)
+- `bypass-mode`: The mode to use for bypassing velocity checks (Enum: Vanilla/Strafe/BHop)
+- `use-timer`: Enable timer manipulation for increased speed (Boolean)
+
+**Note**: This module is designed for servers running Paper with velocity checks. Results may vary depending on server configuration and anti-cheat measures.
+
 ## License
 
 This template is available under the CC0 license. Feel free to use it for your own projects.
